@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  length: 1
+  base_salary: 1
+  start_year: 1
+  fa_status: 1
+  contract_status: 1
+  fantasy_team_id: 1
+  player_id: 1
+
+two:
+  length: 1
+  base_salary: 1
+  start_year: 1
+  fa_status: 1
+  contract_status: 1
+  fantasy_team_id: 1
+  player_id: 1

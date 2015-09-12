@@ -6,13 +6,12 @@ class CreateContracts < ActiveRecord::Migration
       t.integer :start_year
       t.integer :fa_status
       t.integer :contract_status
-      t.integer :fantasy_team_id
-      t.integer :player_id
+
+      t.references :player, index: true, unique:true, foreign_key: true
+      t.references :fantasy_team, index: true, foreign_key: true
 
       t.timestamps null: false
 
-      t.index :fantasy_team_id
-      t.index :player_id
       t.index :fa_status
       t.index :contract_status
     end

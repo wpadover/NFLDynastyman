@@ -1,5 +1,16 @@
 <div class="page-header">
-  <h1><%= @fantasy_team.team_name%> <small><%= @fantasy_team.owner_name%></small></h1>
+  <h1><%= "#{@fantasy_team.team_name} (#{@fantasy_team.abbreviation})"%></br><small><%= @fantasy_team.owner_name%></small></h1>
+</div>
+
+<div class="container">
+  <ul>
+    <li>
+      <b>Active Contract Length Sum:</b> <%= @fantasy_team.contracts.ACTIVE.sum(:length) %>
+    </li>
+    <li>
+      <b>Active Total Salary:</b> <%= @fantasy_team.contracts.ACTIVE.sum(:base_salary) %>
+    </li>
+  </ul>
 </div>
 
 <table class='fantasy_teams table table-striped'>

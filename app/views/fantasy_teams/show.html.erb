@@ -13,21 +13,11 @@
   </ul>
 </div>
 
-<table class='fantasy_teams table table-striped'>
-  <thead>
-    <tr>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Position</th>
-      <th>NFL Team</th>
-      <th>Length</th>
-      <th>Base Salary</th>
-      <th>Start Year</th>
-      <th>FA Status</th>
-      <th>Contract Status</th>
-    </tr>
-  </thead>
-  <tobdy>
-    <%= render @fantasy_team.contracts %>
-  </tbody>
-</table>
+<div ng-view>
+
+<script type="text/ng-template" id="fantasyTeamShow.html">
+  <%= render partial: "show" %>
+</script>
+
+</div ng-view>
+

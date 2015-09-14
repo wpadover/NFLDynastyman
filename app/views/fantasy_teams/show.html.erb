@@ -13,6 +13,11 @@
   </ul>
 </div>
 
+<% if params[:test] %>
+  <ng-view></ng-view>
+
+<% end %>
+
 <table class='fantasy_teams table table-striped'>
   <thead>
     <tr>

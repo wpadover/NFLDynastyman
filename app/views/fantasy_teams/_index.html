@@ -1,0 +1,15 @@
+<table class='fantasy_teams table table-striped'>
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Team Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="fantasy_team in fantasy_teams">
+      <td>{{fantasy_team.owner_name}}</td>
+      <td><a ng-href="fantasy_teams/{{fantasy_team.id}}" target="_self">{{fantasy_team.team_name + ' (' + fantasy_team.abbreviation + ')'}}</a></td>
+    </tr>
+  </tbody>
+</table>
+

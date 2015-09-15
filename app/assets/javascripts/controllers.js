@@ -35,3 +35,10 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
   $scope.orderByField = 'player.last_name';
 
 }]);
+
+
+fantasyTeamControllers.controller('FantasyTeamsCtrl', ['$scope', '$routeParams', 'FantasyTeamList', function($scope, $routeParams, FantasyTeamList) {
+
+  $scope.fantasy_teams = FantasyTeamList.query();
+
+}]);

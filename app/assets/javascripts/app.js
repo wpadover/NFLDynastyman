@@ -15,6 +15,17 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
       templateUrl: 'fantasyTeamShow.html',
       controller: 'FantasyTeamCtrl'
     }
+  ).
+  when('/fantasy_teams',
+    {
+      templateUrl: 'fantasyTeamIndex.html',
+      controller: 'FantasyTeamsCtrl'
+    }
+  ).
+  otherwise(
+    {
+      redirectTo: '/fantasy_teams'
+    }
   );
 
 }]);

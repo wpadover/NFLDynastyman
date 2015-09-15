@@ -13,12 +13,4 @@ class Contract < ActiveRecord::Base
   validates :fantasy_team_id, presence: true
   validates :player_id, presence: true, uniqueness: true
 
-  def fa_status=(s)
-    write_attribute(:fa_status, s.to_s.upcase)
-  end
-
-  def contract_status=(s)
-    write_attribute(:contract_status, s.to_s.upcase)
-  end
-
 end

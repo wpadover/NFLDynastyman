@@ -2,14 +2,10 @@
   <h1>All Fantasy Teams</h1>
 </div>
 
-<table class='fantasy_teams table table-striped'>
-  <thead>
-    <tr>
-      <th>Owner</th>
-      <th>Team Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @fantasy_teams %>
-  </tbody>
-</table>
+<div ng-view>
+
+  <script type="text/ng-template" id="fantasyTeamIndex.html">
+    <%= render partial: "index" %>
+  </script>
+
+</div>

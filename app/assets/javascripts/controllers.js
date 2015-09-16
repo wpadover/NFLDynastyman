@@ -4,6 +4,12 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
 
   FantasyTeam.get({id: $routeParams.id}, function(data) {
     $scope.contracts = data.contracts;
+    $scope.contracts.forEach(function(contract) {
+      contract.year_1_salary = contract.length >= 1 ? contract.base_salary : null;
+      contract.year_2_salary = contract.length >= 2 ? contract.base_salary : null;
+      contract.year_3_salary = contract.length >= 3 ? contract.base_salary : null;
+      contract.year_4_salary = contract.length >= 4 ? contract.base_salary : null;
+    });
   });
 
   $scope.positionFilter = {
@@ -31,6 +37,39 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     return $scope.positionFilter[contract.player.position];
   };
 
+  $scope.filteredSalaryTotal = function() {
+    var total = 0;
+    if ($scope.contracts) {
+      $scope.contracts.forEach(function(contract) {
+        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
+          total = total + contract.base_salary;
+        }
+      });
+    }
+
+    return total;
+  };
+
+  $scope.filteredLengthTotal = function() {
+    var total = 0;
+    if ($scope.contracts) {
+      $scope.contracts.forEach(function(contract) {
+        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
+          total = total + contract.length;
+        }
+      });
+    }
+
+      return total;
+  };
+
+  $scope.nullsToBottom = function(obj,key) {
+    var sortField = $scope.orderByField;
+    if (sortField.startsWith('-')) {
+      sortField = sortField.substr(1);
+    }
+    return (obj[sortField] === null) ? 0 : -1;
+  };
 
   $scope.orderByField = 'player.last_name';
 

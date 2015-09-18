@@ -11,4 +11,3 @@ fantasyTeamServices.factory('FantasyTeamList', ['$resource',
     return $resource('fantasy_teams.json');
   }]
 );
-

@@ -1,7 +1,9 @@
 var app = angular.module('dynastyFootballManagerApp', [
   'ngRoute',
   'fantasyTeamControllers',
-  'fantasyTeamServices'
+  'fantasyTeamServices',
+  'contractControllers',
+  'contractServices'
 ]);
 
 
@@ -20,6 +22,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     {
       templateUrl: 'fantasyTeamIndex.html',
       controller: 'FantasyTeamsCtrl'
+    }
+  ).
+  when('/contracts',
+    {
+      templateUrl: 'contractsIndex.html',
+      controller: 'ContractsCtrl'
     }
   ).
   otherwise(

@@ -1,26 +1,23 @@
 <div class="btn-group" data-toggle="buttons">
   <div>
+
     <b>Filter Positions:</b>
     <br/>
+    <div class="btn-group">
+      <label ng-repeat="pos in ['ALL', 'QB', 'RB', 'WR', 'RB/WR', 'TE', 'DST', 'K']" class="btn btn-primary" ng-model="radio.position" btn-radio="pos">{{pos}}</label>
+    </div>
 
-    <input type="checkbox" ng-model="positionFilter['QB']" checked="checked">QB
-    <input type="checkbox" ng-model="positionFilter['RB']" checked="checked">RB
-    <input type="checkbox" ng-model="positionFilter['WR']" checked="checked">WR
-    <input type="checkbox" ng-model="positionFilter['TE']" checked="checked">TE
-    <input type="checkbox" ng-model="positionFilter['DST']" checked="checked">DST
-    <input type="checkbox" ng-model="positionFilter['K']" checked="checked">K
-  </div>
-  <br/>
-  <div>
-    <b>Filter Contract Status:</b>
+    <br/>
     <br/>
 
-    <input type="checkbox" ng-model="contractFilter['ACTIVE']" checked="checked">Active
-    <input type="checkbox" ng-model="contractFilter['ROOKIE']" checked="checked">Rookie
-    <input type="checkbox" ng-model="contractFilter['SSPD']" checked="checked">Suspended
-    <input type="checkbox" ng-model="contractFilter['IR']" checked="checked">IR
-    <input type="checkbox" ng-model="contractFilter['LTIR']" checked="checked">LTIR
+    <b>Filter Contract Status:</b>
+    <br/>
+    <div class="btn-group">
+      <label ng-repeat="status in ['ALL', 'ACTIVE', 'ROOKIE', 'SSPD', 'IR', 'LTIR']" class="btn btn-primary" ng-model="radio.contractStatus" btn-radio="status">{{status}}</label>
+    </div>
+
   </div>
+
 </div>
 <br/>
 <br/>

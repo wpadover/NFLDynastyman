@@ -1,4 +1,6 @@
-var fantasyTeamControllers= angular.module('fantasyTeamControllers', []);
+var fantasyTeamControllers= angular.module('fantasyTeamControllers', [
+  'ui.bootstrap'
+]);
 
 fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 'FantasyTeam', function($scope, $routeParams, FantasyTeam) {
 
@@ -12,29 +14,30 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     });
   });
 
-  $scope.positionFilter = {
-    "QB": true,
-    "RB": true,
-    "WR": true,
-    "TE": true,
-    "DST": true,
-    "K": true
-  };
-
-  $scope.contractFilter = {
-    'ACTIVE': true,
-    'ROOKIE': true,
-    'IR': true,
-    'SSPD': true,
-    'LTIR': true
+  $scope.radio = {
+    position: 'ALL',
+    contractStatus: 'ALL'
   };
 
   $scope.filterByContractStatus = function(contract) {
-    return $scope.contractFilter[contract.contract_status];
+    if (!$scope.radio.contractStatus || $scope.radio.contractStatus === 'ALL') {
+      return true;
+    } else {
+      return $scope.radio.contractStatus === contract.contract_status;
+    }
   };
 
   $scope.filterByPosition = function(contract) {
-    return $scope.positionFilter[contract.player.position];
+    if (!$scope.radio.position || $scope.radio.position === 'ALL') {
+      return true;
+    } else {
+      switch($scope.radio.position) {
+        case 'RB/WR':
+          return contract.player.position === 'RB' || contract.player.position === 'WR';
+        default:
+          return $scope.radio.position === contract.player.position;
+      }
+    }
   };
 
   $scope.filteredSalaryTotal = function() {

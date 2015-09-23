@@ -53,6 +53,19 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     return total;
   };
 
+  $scope.filteredNumberOfPlayers = function() {
+    var total = 0;
+    if ($scope.contracts) {
+      $scope.contracts.forEach(function(contract) {
+        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
+          total = total + 1;
+        }
+      });
+    }
+
+    return total;
+  };
+
   $scope.filteredLengthTotal = function() {
     var total = 0;
     if ($scope.contracts) {

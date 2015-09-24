@@ -3,7 +3,7 @@ class Contract < ActiveRecord::Base
   belongs_to :fantasy_team
   belongs_to :player
   enum fa_status: [ :RFA, :UFA ]
-  enum contract_status: [:ACTIVE, :ROOKIE, :SSPD, :IR, :LTIR, :RENTAL]
+  enum contract_status: [:ACTIVE, :ROOKIE, :SSPD, :IR, :RENTAL]
 
   validates :length, presence: true
   validates :base_salary, numericality: { greater_than: 0 }, presence: true

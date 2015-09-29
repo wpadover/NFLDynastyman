@@ -92,7 +92,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
 }]);
 
 
-fantasyTeamControllers.controller('FantasyTeamsCtrl', ['$scope', '$routeParams', 'FantasyTeamList', function($scope, $routeParams, FantasyTeamList) {
+fantasyTeamControllers.controller('FantasyTeamsCtrl', ['$scope', 'FantasyTeamList', function($scope, FantasyTeamList) {
 
   $scope.fantasy_teams = FantasyTeamList.query();
 

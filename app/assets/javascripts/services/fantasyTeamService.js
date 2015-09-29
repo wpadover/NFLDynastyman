@@ -8,6 +8,6 @@ fantasyTeamServices.factory('FantasyTeam', ['$resource',
 
 fantasyTeamServices.factory('FantasyTeamList', ['$resource',
   function($resource){
-    return $resource('fantasy_teams.json');
+    return $resource('/fantasy_teams.json');
   }]
 );

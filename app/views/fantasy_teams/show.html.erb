@@ -1,5 +1,6 @@
 <div class="page-header">
   <h1><%= "#{@fantasy_team.team_name} (#{@fantasy_team.abbreviation})"%></br><small><%= @fantasy_team.owner_name%></small></h1>
+  <h4><a href='<%=@fantasy_team.espn_link%>' target='_blank'>ESPN Team Page</a></h4>
 </div>
 
 <div ng-view>

@@ -6,12 +6,6 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
 
   FantasyTeam.get({id: $routeParams.id}, function(data) {
     $scope.contracts = data.contracts;
-    $scope.contracts.forEach(function(contract) {
-      contract.year_1_salary = contract.length >= 1 ? contract.base_salary : null;
-      contract.year_2_salary = contract.length >= 2 ? contract.base_salary : null;
-      contract.year_3_salary = contract.length >= 3 ? contract.base_salary : null;
-      contract.year_4_salary = contract.length >= 4 ? contract.base_salary : null;
-    });
   });
 
   $scope.radio = {
@@ -45,7 +39,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     if ($scope.contracts) {
       $scope.contracts.forEach(function(contract) {
         if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
-          total = total + contract.base_salary;
+          total = total + contract.year_1_salary;
         }
       });
     }
@@ -57,7 +51,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     var total = 0;
     if ($scope.contracts) {
       $scope.contracts.forEach(function(contract) {
-        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
+        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract) && contract.length) {
           total = total + 1;
         }
       });

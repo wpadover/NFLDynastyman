@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929004213) do
+ActiveRecord::Schema.define(version: 20151008004638) do
 
   create_table "contracts", force: :cascade do |t|
     t.integer  "length"
-    t.integer  "base_salary"
     t.integer  "start_year"
     t.integer  "fa_status"
     t.integer  "contract_status"
@@ -23,6 +22,10 @@ ActiveRecord::Schema.define(version: 20150929004213) do
     t.integer  "fantasy_team_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.float    "year_1_salary"
+    t.float    "year_2_salary"
+    t.float    "year_3_salary"
+    t.float    "year_4_salary"
   end
 
   add_index "contracts", ["contract_status"], name: "index_contracts_on_contract_status"
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150929004213) do
     t.string   "position"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "bye_week"
   end
 
   add_index "players", ["nfl_team_name"], name: "index_players_on_nfl_team_name"

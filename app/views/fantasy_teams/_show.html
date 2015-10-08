@@ -56,6 +56,10 @@
     NFL Team<span ng-show="(orderByField == 'player.nfl_team_name') || (orderByField == '-player.nfl_team_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
     </th>
     <th>
+      <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.bye_week'; reverseSort = !reverseSort">
+    Bye<span ng-show="(orderByField == 'player.bye_week') || (orderByField == '-player.bye_week')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+    </th>
+    <th>
       <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'fa_status'; reverseSort = !reverseSort">
     UFA/RFA<span ng-show="(orderByField == 'fa_status') || (orderByField == '-fa_status')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
     </th>
@@ -66,10 +70,6 @@
     <th>
       <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'length'; reverseSort = !reverseSort">
     Len<span ng-show="(orderByField == 'length') || (orderByField == '-length')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-    </th>
-    <th>
-      <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'base_salary'; reverseSort = !reverseSort">
-    Salary<span ng-show="(orderByField == 'base_salary') || (orderByField == '-base_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
     </th>
     <th>
       <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'start_year'; reverseSort = !reverseSort">
@@ -99,10 +99,10 @@
       <td>{{contract.player.first_name}}</td>
       <td>{{contract.player.position}}</td>
       <td>{{contract.player.nfl_team_name}}</td>
+      <td>{{contract.player.bye_week}}</td>
       <td>{{contract.fa_status}}</td>
       <td>{{contract.contract_status}}</td>
       <td>{{contract.length}}</td>
-      <td>{{contract.base_salary}}</td>
       <td>{{contract.start_year}}</td>
       <td>{{contract.year_1_salary}}</td>
       <td>{{contract.year_2_salary}}</td>

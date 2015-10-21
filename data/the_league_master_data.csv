@@ -114,7 +114,8 @@ BUST,Cobb,David,RB,Ten,4,4,1,1,1,1,RFA,IR
 CLAR,Coleman,Brandon,WR,NO,11,4,1,1,1,1,RFA,Active
 FA,Coleman,Derrick,RB,Sea,9,,,,,,,
 MPS,Coleman,Tevin,RB,Atl,10,3,5,5,5,,RFA,Active
-NOTT,Colston,Marques,WR,NO,11,1,4,,,,RFA,Active
+NOTT,Colston - Drop Penalty,Marques,WR,NO,11,,0.8,,,,RFA,Active
+FA,Colston,Marques,WR,NO,11,,,,,,UFA,Active
 FA,Colts,Indianapolis,DST,Ind,10,,,,,,,
 FA,Conley,Chris,WR,KC,9,,,,,,,
 FA,Cook,Jared,TE,StL,6,,,,,,,
@@ -312,6 +313,7 @@ MPS,Johnson,Duke,RB,Cle,11,3,7,7,7,,RFA,Active
 SURP,Johnson,Stevie,WR,SD,10,2,4,4,,,UFA,Active
 ADEL,Jones,Marvin,WR,Cin,7,2,1,1,,,RFA,Active
 BUST,Jones,Matt,RB,Wsh,8,4,1,1,1,1,RFA,Rookie
+MPS,Jones,Landry,QB,Pit,11,1,6,,,,UFA,Active
 FA,Jones,Seantavius,WR,NO,11,,,,,,,
 FA,Jones,Jacoby,WR,SD,10,,,,,,,
 SURP,Jones,James,WR,GB,7,1,4,,,,UFA,Active
@@ -336,7 +338,8 @@ ADEL,Lee,Marqise,WR,Jac,8,1,1,,,,UFA,Active
 ADEL,Lewis,Dion,RB,NE,4,1,4,,,,RFA,Active
 FA,Lewis,Marcedes,TE,Jac,8,,,,,,,
 FA,Lindley,Ryan,QB,Ari,9,,,,,,,
-MPS,Lions,Detroit,DST,Det,9,1,3,,,,UFA,Active
+FA,Lions,Detroit,DST,Det,9,,,,,,UFA,Active
+MPS,Lions - Drop Penalty,Detroit,DST,Det,9,1,0.6,,,,UFA,Active
 MPS,Lockett,Tyler,WR,Sea,9,4,5,5,5,5,RFA,Rookie
 FA,Lockette,Ricardo,WR,Sea,9,,,,,,,
 FA,Lorig,Erik,RB,NO,11,,,,,,,
@@ -374,7 +377,7 @@ BUST,McKinnon,Jerick,RB,Min,5,4,1,1,1,1,RFA,Active
 COMM,McManus,Brandon,K,Den,7,1,1,,,,UFA,Active
 FA,Mettenberger,Zach,QB,Ten,4,,,,,,,
 COMM,Michael - Drop Penalty,Christine,RB,Dal,6,,0.2,,,,UFA,Active
-FA,Michael,Christine,RB,Dal,6,,,,,,,
+MPS,Michael,Christine,RB,Dal,6,1,6,,,,UFA,Active
 CLAR,Miller,Heath,TE,Pit,11,2,1,1,,,RFA,Active
 FA,Miller,Bruce,RB,SF,10,,,,,,,
 PADO,Miller,Lamar,RB,Mia,5,3,40,40,40,,RFA,Active
@@ -447,7 +450,8 @@ FA,Rainey,Bobby,RB,TB,6,,,,,,,
 MPS,Rams,St. Louis,DST,StL,6,3,3,3,3,,RFA,Active
 ADEL,Randle,Rueben,WR,NYG,11,2,2,2,,,RFA,Active
 SURP,Randle,Joseph,RB,Dal,6,3,19,19,19,,RFA,Active
-PADO,Ravens,Baltimore,DST,Bal,9,1,1,,,,RFA,Active
+PADO,Ravens - Drop Penalty,Baltimore,DST,Bal,9,,0.2,,,,RFA,Active
+FA,Ravens,Baltimore,DST,Bal,9,,,,,,RFA,Active
 CLAR,Rawls,Thomas,RB,Sea,9,1,1,,,,UFA,Active
 FA,Reaves,Darrin,RB,Car,5,,,,,,,
 FA,Redd,Silas,RB,Wsh,8,,,,,,,
@@ -534,7 +538,7 @@ SURP,Tate,Golden,WR,Det,9,4,25,25,25,25,RFA,Active
 COMM,Taylor,Tyrod,QB,Buf,8,4,9,9,9,9,RFA,Active
 FA,Taylor,Stepfan,RB,Ari,9,,,,,,,
 SURP,Texans,Houston,DST,Hou,9,1,4,,,,RFA,Active
-FA,Thomas,Julius,TE,Jac,8,,,,,,,
+NOTT,Thomas,Julius,TE,Jac,8,1,2,,,,UFA,Active
 FA,Thomas,De'Anthony,RB,KC,9,,,,,,,
 FA,Thomas,Pierre,RB,NO,11,,,,,,,
 PADO,Thomas,Demaryius,WR,Den,7,4,70,70,70,70,RFA,Active
@@ -554,9 +558,10 @@ JAGS,Tucker,Justin,K,Bal,9,4,1,1,1,1,RFA,Active
 FA,Turbin,Robert,RB,Sea,9,,,,,,,
 FA,Uzomah,C.J.,TE,Cin,7,,,,,,,
 BUST,Vereen,Shane,RB,NYG,11,2,3,3,,,RFA,Active
-MPS,Vick,Michael,QB,Pit,11,1,15,,,,UFA,Active
-SURP,Vick -Retained Salary,Michael,QB,Pit,11,,14,,,,UFA,Active
-FA,Vikings,Minnesota,DST,Min,5,,,,,,,
+MPS,Vick - Drop Penalty,Michael,QB,Pit,11,,3,,,,UFA,Active
+FA,Vick,Michael,QB,Pit,11,,,,,,UFA,Active
+SURP,Vick - Retained Salary Drop Penalty ,Michael,QB,Pit,11,,2.8,,,,UFA,Active
+PADO,Vikings,Minnesota,DST,Min,5,1,1,,,,UFA,Active
 FITZ,Vinatieri,Adam,K,Ind,10,1,2,,,,RFA,Active
 FA,Walford,Clive,TE,Oak,6,,,,,,,
 MPS,Walker,Delanie,TE,Ten,4,2,7,7,,,RFA,Active

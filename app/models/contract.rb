@@ -2,8 +2,8 @@ class Contract < ActiveRecord::Base
 
   belongs_to :fantasy_team
   belongs_to :player
-  enum fa_status: [ :RFA, :UFA ]
-  enum contract_status: [:ACTIVE, :ROOKIE, :SSPD, :IR, :RENTAL]
+  enum fa_status: [ :RFA, :UFA, :RENTAL ]
+  enum contract_status: [:ACTIVE, :ROOKIE, :SSPD, :IR ]
 
   validates :start_year, presence: true
   validates :fa_status, presence: true

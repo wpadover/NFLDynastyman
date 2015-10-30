@@ -44,7 +44,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
       });
     }
 
-    return total;
+    return Math.round(total*100)/100;
   };
 
   $scope.filteredNumberOfPlayers = function() {

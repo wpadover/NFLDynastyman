@@ -51,7 +51,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     var total = 0;
     if ($scope.contracts) {
       $scope.contracts.forEach(function(contract) {
-        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract) && contract.length) {
+        if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract) && (contract.length || contract.fa_status === 'RENTAL')) {
           total = total + 1;
         }
       });

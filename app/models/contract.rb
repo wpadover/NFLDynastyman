@@ -7,7 +7,6 @@ class Contract < ActiveRecord::Base
 
   validates :start_year, presence: true
   validates :fa_status, presence: true
-  validates :contract_status, presence: true
   validates :fantasy_team_id, presence: true
   validates :player_id, presence: true, uniqueness: true
 

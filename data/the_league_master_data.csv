@@ -29,7 +29,7 @@ ADEL,Williams,Andre,RB,NYG,11,2,2,2,,,RFA,Active
 ADEL,Yeldon,T.J.,RB,Jac,8,3,22,22,22,,RFA,Active
 BUST,Abdullah,Ameer,RB,Det,9,4,10,10,10,10,RFA,Active
 BUST,Brown,Antonio,WR,Pit,11,4,84,84,84,84,RFA,Active
-BUST,Cobb,David,RB,Ten,4,4,1,1,1,1,RFA,IR
+BUST,Cobb,David,RB,Ten,4,4,1,1,1,1,RFA,Active
 BUST,Cooks,Brandin,WR,NO,11,4,48,48,48,48,RFA,Active
 BUST,Cousins,Kirk,QB,Wsh,8,1,2,,,,RFA,Active
 BUST,Cowboys,Dallas,DST,Dal,6,1,1,,,,UFA,Active
@@ -39,7 +39,7 @@ BUST,Dolphins,Miami,DST,Mia,5,1,1,,,,RFA,Active
 BUST,Eifert,Tyler,TE,Cin,7,2,2,2,,,UFA,Active
 BUST,Franks,Andrew,K,Mia,5,1,1,,,,RFA,Active
 BUST,Green,A.J.,WR,Cin,7,4,69,69,69,69,RFA,Active
-BUST,Harvin,Percy,WR,Buf,8,1,1,,,,RFA,Active
+BUST,Harvin,Percy,WR,Buf,8,1,1,,,,RFA,IR
 BUST,Hoyer,Brian,QB,Hou,9,1,1,,,,RFA,Active
 BUST,Ingram,Mark,RB,NO,11,3,41,41,41,,RFA,Active
 BUST,Jones,Matt,RB,Wsh,8,4,1,1,1,1,RFA,Rookie
@@ -48,9 +48,9 @@ BUST,Langford,Jeremy,RB,Chi,7,4,1,1,1,1,RFA,Rookie
 BUST,McKinnon,Jerick,RB,Min,5,4,1,1,1,1,RFA,Active
 BUST,Parker,DeVante,WR,Mia,5,4,5,5,5,5,RFA,Active
 BUST,Peterson,Adrian,RB,Min,5,3,66,66,66,,RFA,Active
-BUST,Robinson,Khiry,RB,NO,11,2,1,1,,,UFA,Active
+BUST,Robinson,Khiry,RB,NO,11,2,1,1,,,UFA,IR
 BUST,Rudolph,Kyle,TE,Min,5,3,1,1,1,,RFA,Active
-BUST,Taliaferro,Lorenzo,RB,Bal,9,3,2,2,2,,RFA,Active
+BUST,Taliaferro,Lorenzo,RB,Bal,9,3,2,2,2,,RFA,IR
 BUST,Tannehill,Ryan,QB,Mia,5,4,46,46,46,46,RFA,Active
 BUST,Vereen,Shane,RB,NYG,11,2,3,3,,,RFA,Active
 CLAR,Anderson,C.J.,RB,Den,7,3,62,62,62,,RFA,Active
@@ -85,7 +85,8 @@ COMM,Bell,Le'Veon,RB,Pit,11,4,85,85,85,85,RFA,IR
 COMM,Broncos,Denver,DST,Den,7,1,1,,,,RFA,Active
 COMM,Bryant,Martavis,WR,Pit,11,3,12,12,12,,RFA,Active
 COMM,Cunningham - Drop Penalty,Benjamin,RB,StL,6,,0.4,,,,UFA,Active
-COMM,Ginn,Ted,WR,Car,5,1,1,,,,UFA,Active
+COMM,Ginn - Drop Penalty,Ted,WR,Car,5,,0.2,,,,UFA,Active
+FA,Ginn,Ted,WR,Car,5,,,,,,UFA,Active
 COMM,Gordon,Josh,WR,Cle,11,3,22,22,22,,RFA,SSPD
 COMM,Greene,Rashad,WR,Jac,8,2,1,1,,,UFA,Rookie
 COMM,Gurley,Todd,RB,StL,6,4,35,35,35,35,RFA,Active
@@ -138,7 +139,7 @@ FA,Bears,Chicago,DST,Chi,7,,,,,,UFA,
 FA,Beasley,Cole,WR,Dal,6,,,,,,UFA,
 FA,Bell,Kenny,WR,TB,6,,,,,,UFA,
 FA,Bell,Blake,TE,SF,10,,,,,,UFA,
-FA,Bell,Joique,RB,Det,9,,,,,,UFA,
+NOTT,Bell,Joique,RB,Det,9,2,1,1,,,UFA,Active
 FA,Bellamy,Josh,WR,Chi,7,,,,,,UFA,
 FA,Bersin,Brenton,WR,Car,5,,,,,,UFA,
 FA,Blackmon,Justin,WR,Jac,8,,,,,,UFA,
@@ -167,11 +168,11 @@ FA,Carpenter,Dan,K,Buf,8,,,,,,UFA,
 FA,Carter,Duron,WR,Ind,10,,,,,,UFA,
 FA,Casey,James,TE,Den,7,,,,,,UFA,
 FA,Catanzaro,Chandler,K,Ari,9,,,,,,UFA,
-FA,Celek,Brent,TE,Phi,8,,,,,,UFA,
+SURP,Celek,Brent,TE,Phi,8,1,20,,,,UFA,Active
 FA,Chandler,Scott,TE,NE,4,,,,,,UFA,
 FA,Chargers,San Diego,DST,SD,10,,,,,,UFA,
 FA,Charles,Orson,RB,NO,11,,,,,,UFA,
-FA,Chiefs,Kansas City,DST,KC,9,,,,,,UFA,
+PADO,Chiefs,Kansas City,DST,KC,9,1,2,,,,UFA,Active
 FA,Christian,Gerald,TE,Ari,9,,,,,,UFA,
 FA,Clausen,Jimmy,QB,Chi,7,,,,,,UFA,
 FA,Clemens,Kellen,QB,SD,10,,,,,,UFA,
@@ -217,7 +218,7 @@ FA,Fowler,Jalston,RB,Ten,4,,,,,,UFA,
 FA,Fuller,Corey,WR,Det,9,,,,,,UFA,
 FA,Gabriel,Taylor,WR,Cle,11,,,,,,UFA,
 FA,Gaffney,Tyler,RB,NE,4,,,,,,UFA,
-FA,Garoppolo,Jimmy,QB,NE,4,,,,,,UFA,
+SURP,Garoppolo,Jimmy,QB,NE,4,1,20,,,,UFA,Active
 FA,Gerhart,Toby,RB,Jac,8,,,,,,UFA,
 FA,Gibson,Brandon,WR,NE,4,,,,,,UFA,
 FA,Givens,Chris,WR,StL,6,,,,,,UFA,
@@ -286,6 +287,7 @@ FA,Johnson,Malcolm,TE,Cle,11,,,,,,UFA,
 FA,Jones,Seantavius,WR,NO,11,,,,,,UFA,
 FA,Jones,Jacoby,WR,SD,10,,,,,,UFA,
 FA,Juszczyk,Kyle,RB,Bal,9,,,,,,UFA,
+FITZ,Keenum,Case,QB,StL,6,1,15,,,,UFA,Active
 FA,Kendricks,Lance,TE,StL,6,,,,,,UFA,
 FA,Kerley,Jeremy,WR,NYJ,5,,,,,,UFA,
 FA,Kroft,Tyler,TE,Cin,7,,,,,,UFA,
@@ -298,7 +300,7 @@ FA,Lions,Detroit,DST,Det,9,,,,,,UFA,Active
 FA,Lockette,Ricardo,WR,Sea,9,,,,,,UFA,
 FA,Lorig,Erik,RB,NO,11,,,,,,UFA,
 FA,Lynch,Arthur,TE,Mia,5,,,,,,UFA,
-FA,Mallett - Drop Penalty,Ryan,QB,Hou,9,,0.2,,,,RFA,Active
+JAGS,Mallett - Drop Penalty,Ryan,QB,Hou,9,,0.2,,,,RFA,Active
 FA,Mannion,Sean,QB,StL,6,,,,,,UFA,
 FA,Mariani,Marc,WR,Chi,7,,,,,,UFA,
 FA,Matthews,Chris,WR,Sea,9,,,,,,UFA,
@@ -365,7 +367,7 @@ FA,Rivera,Mychal,TE,Oak,6,,,,,,UFA,
 FA,Roberts,Andre,WR,Wsh,8,,,,,,UFA,
 FA,Robinson,Gerell,WR,Mia,5,,,,,,UFA,
 FA,Robinson,Adrien,TE,NYG,11,,,,,,UFA,
-FA,Rodgers,Richard,TE,GB,7,,,,,,UFA,Active
+FITZ,Rodgers,Richard,TE,GB,7,2,1,1,,,UFA,Active
 FA,Rodgers,Jacquizz,RB,Chi,7,,,,,,UFA,
 FA,Rosario,Dante,TE,Chi,7,,,,,,UFA,
 FA,Ross,Jeremy,WR,Det,9,,,,,,UFA,
@@ -375,7 +377,7 @@ FA,Sankey,Bishop,RB,Ten,4,,,,,,RFA,Active
 FA,Santos,Cairo,K,KC,9,,,,,,UFA,
 FA,Sanu,Mohamed,WR,Cin,7,,,,,,UFA,
 FA,Savage,Tom,QB,Hou,9,,,,,,UFA,
-FA,Schaub,Matt,QB,Bal,9,,,,,,UFA,
+JAGS,Schaub,Matt,QB,Bal,9,1,25,,,,UFA,Active
 FA,Scobee,Josh,K,Jac,8,,,,,,UFA,
 FA,Seastrunk,Lache,RB,Ten,4,,,,,,UFA,
 FA,Sherman,Anthony,RB,KC,9,,,,,,UFA,
@@ -402,6 +404,7 @@ FA,Taylor,Stepfan,RB,Ari,9,,,,,,UFA,
 FA,Thomas,De'Anthony,RB,KC,9,,,,,,UFA,
 FA,Thomas,Pierre,RB,NO,11,,,,,,UFA,
 FA,Thompkins,Kenbrell,WR,Oak,6,,,,,,UFA,
+JAGS,Thompson,Dylan,QB,SF,10,1,1,,,,UFA,Active
 FA,Thompson,Juwan,RB,Den,7,,,,,,UFA,
 FA,Thompson,Taylor,TE,Ten,4,,,,,,UFA,
 FA,Titans,Tennessee,DST,Ten,4,,,,,,UFA,
@@ -434,7 +437,7 @@ FA,Woods,Robert,WR,Buf,8,,,,,,UFA,
 FA,Wright,Jarius,WR,Min,5,,,,,,UFA,
 FA,Wright,Tim,TE,NE,4,,,,,,UFA,
 FA,Wright,James,WR,Cin,7,,,,,,UFA,
-FA,Yates,T.J.,QB,Atl,10,,,,,,UFA,
+FITZ,Yates,T.J.,QB,HOU,9,1,15,,,,UFA,Active
 FA,Young,Darrel,RB,Wsh,8,,,,,,UFA,
 FA,Zuerlein,Greg,K,StL,6,,,,,,UFA,
 FITZ,Allen,Dwayne,TE,Ind,10,2,2,2,,,RFA,Active
@@ -479,13 +482,14 @@ JAGS,Gates,Antonio,TE,SD,10,1,2,,,,RFA,Active
 JAGS,Gronkowski,Rob,TE,NE,4,4,62,62,62,62,RFA,Active
 JAGS,Hillman,Ronnie,RB,Den,7,3,1,1,1,,RFA,Active
 JAGS,Johnson,Calvin,WR,Det,9,4,66,66,66,66,RFA,Active
-JAGS,Mallett,Ryan,QB,Hou,9,,0.2,,,,RFA,Active
-JAGS,Manning,Peyton,QB,Den,7,2,41,41,,,RFA,Active
+FA,Mallett,Ryan,QB,Hou,9,,,,,,RFA,Active
+JAGS,Manning - Drop Penalty,Peyton,QB,Den,7,2,16.4,8.2,,,RFA,Active
+FA,Manning,Peyton,QB,Den,7,,,,,,UFA,Active
 JAGS,Matthews,Jordan,WR,Phi,8,3,30,30,30,,RFA,Active
 JAGS,McFadden,Darren,RB,Dal,6,1,3,,,,RFA,Active
 JAGS,Mettenberger,Zach,QB,Ten,4,1,1,,,,UFA,Active
 FA,Nugent,Mike,K,Cin,7,,,,,,,Active
-JAGS,Perriman,Breshad,WR,Bal,9,2,2,2,,,RFA,Active
+JAGS,Perriman,Breshad,WR,Bal,9,2,2,2,,,RFA,IR
 JAGS,Reece,Marcel,RB,Oak,6,1,3,,,,UFA,Active
 JAGS,Rivers,Philip,QB,SD,10,3,29,29,29,,RFA,Active
 JAGS,Robinson,Denard,RB,Jac,8,1,1,,,,RFA,Active
@@ -530,7 +534,8 @@ NOTT,Bennett,Martellus,TE,Chi,7,4,7,7,7,7,RFA,Active
 NOTT,Bernard,Giovani,RB,Cin,7,4,12,12,12,12,RFA,Active
 NOTT,Blue - Drop Penalty,Alfred,RB,Hou,9,,1.4,,,,RFA,Active
 NOTT,Colston - Drop Penalty,Marques,WR,NO,11,,0.8,,,,RFA,Active
-NOTT,Conley,Chris,WR,KC,9,1,1,,,,UFA,Active
+NOTT,Conley - Drop Penalty,Chris,WR,KC,9,,0.2,,,,UFA,Active
+FA,Conley,Chris,WR,KC,9,,,,,,UFA,Active
 NOTT,Cutler,Jay,QB,Chi,7,4,7,7,7,7,RFA,Active
 FA,Dawson,Phil,K,SF,10,,,,,,,Active
 NOTT,Floyd,Malcom,WR,SD,10,1,5,,,,UFA,Active
@@ -571,7 +576,7 @@ PADO,Dunbar,Lance,RB,Dal,6,2,2,2,,,UFA,IR
 PADO,Foles,Nick,QB,StL,6,2,5,5,,,RFA,Active
 PADO,Foster,Arian,RB,Hou,9,2,36,36,,,RFA,IR
 PADO,Funchess,Devin,WR,Car,5,4,5,5,5,5,RFA,Rookie
-FA,Gano,Graham,K,Car,5,,,,,,UFA,Active
+COMM,Gano,Graham,K,Car,5,1,15,,,,UFA,Active
 PADO,Green,Ladarius,TE,SD,10,3,3,3,3,,UFA,Active
 PADO,Ivory,Chris,RB,NYJ,5,2,8,8,,,RFA,Active
 PADO,Latimer - Drop Penalty,Cody,WR,Den,7,,1.8,1.2,0.6,,RFA,Active
@@ -587,7 +592,8 @@ PADO,Sanchez,Mark,QB,Phi,8,1,3,,,,RFA,Active
 PADO,Seferian-Jenkins,Austin,TE,TB,6,3,1,1,1,,RFA,Active
 PADO,Smith,Geno,QB,NYJ,5,2,2,2,,,UFA,IR
 PADO,Thomas,Demaryius,WR,Den,7,4,70,70,70,70,RFA,Active
-PADO,Vikings,Minnesota,DST,Min,5,1,1,,,,UFA,Active
+PADO,Vikings - Drop Penalty,Minnesota,DST,Min,5,,0.2,,,,UFA,Active
+FA,Vikings,Minnesota,DST,Min,5,,,,,,UFA,Active
 PADO,Weeden - Drop Penalty,Brandon,QB,Dal,6,,0.4,,,,UFA,Active
 PADO,White,James,RB,NE,4,1,10,,,,UFA,Active
 PADO,Williams,Maxx,TE,Bal,9,4,6,6,6,6,UFA,Rookie
@@ -595,7 +601,8 @@ SURP,Agholor,Nelson,WR,Phi,8,3,28,28,28,,RFA,Rookie
 SURP,Allen,Javorius,RB,Bal,9,2,1,1,,,UFA,Rookie
 SURP,Boldin,Anquan,WR,SF,10,2,2,2,,,RFA,Active
 SURP,Brady,Tom,QB,NE,4,3,56,56,56,,RFA,Active
-SURP,Brindza,Kyle,K,TB,6,1,2,,,,UFA,Active
+SURP,Brindza - Drop Penalty,Kyle,K,TB,6,,0.4,,,,UFA,Active
+FA,Brindza,Kyle,K,TB,6,,,,,,UFA,Active
 SURP,Bush,Reggie,RB,SF,10,1,1,,,,RFA,IR
 SURP,Charles,Jamaal,RB,KC,9,3,87,87,87,,RFA,IR
 SURP,Crabtree,Michael,WR,Oak,6,3,3,3,3,,RFA,Active
@@ -603,7 +610,8 @@ SURP,Ertz,Zach,TE,Phi,8,3,5,5,5,,RFA,Active
 SURP,Floyd,Michael,WR,Ari,9,4,21,21,21,21,RFA,Active
 SURP,Giants,New York,DST,NYG,11,2,4,4,,,UFA,Active
 SURP,Gostkowski,Stephen,K,NE,4,1,5,,,,RFA,Active
-SURP,Gray,Jonas,RB,NE,4,1,2,,,,UFA,Active
+SURP,Gray - Drop Penalty,Jonas,RB,NE,4,,0.4,,,,UFA,Active
+FA,Gray,Jonas,RB,NE,4,,,,,,UFA,Active
 SURP,Johnson,Stevie,WR,SD,10,2,4,4,,,UFA,Active
 SURP,Jones,James,WR,GB,7,1,4,,,,UFA,Active
 SURP,Kearse,Jermaine,WR,Sea,9,2,4,4,,,UFA,Active

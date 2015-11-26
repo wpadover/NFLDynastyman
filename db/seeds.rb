@@ -15,4 +15,4 @@ FantasyTeam.create(owner_name: 'Matt Surprenant', team_name: 'Team Surprenant', 
 FantasyTeam.create(owner_name: 'Marc Adelberg', team_name: 'Team Adelberg', abbreviation: 'ADEL', espn_id: 7)
 FantasyTeam.create(owner_name: 'Nicholas Nottebohm', team_name: 'Team Nottebohm', abbreviation: 'NOTT', espn_id: 8)
 FantasyTeam.create(owner_name: 'Rich Clark', team_name: 'Tickle Me Elmo', abbreviation: 'CLAR', espn_id: 9)
-FantasyTeam.create(owner_name: 'Spiro Floratos', team_name: 'Got Hates Jags', abbreviation: 'JAGS', espn_id: 10)
+FantasyTeam.create(owner_name: 'Spiro Floratos', team_name: 'God Hates Jags', abbreviation: 'JAGS', espn_id: 10)

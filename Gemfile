@@ -27,6 +27,10 @@ gem 'angularjs-rails'
 
 gem 'bower-rails'
 
+gem 'google_drive'
+
+gem 'mail'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -78,6 +78,7 @@ namespace :players do
 
       # Since we are wiping previous data each time,
       # make a transaction in case something fails
+      recent_player = ''
       ActiveRecord::Base.transaction do
 
         # Wipe previous data
@@ -93,6 +94,7 @@ namespace :players do
               position: row[POSITION_IDX],
               bye_week: row[BYE_WEEK_IDX]
             )
+          recent_player = "#{player.first_name} #{player.last_name}"
           if fantasy_team_by_abbrev[team_abbreviation]
             team = fantasy_team_by_abbrev[team_abbreviation]
             puts "Creating contract for #{player.first_name} #{player.last_name}"
@@ -114,10 +116,11 @@ namespace :players do
 
     rescue Google::APIClient::ClientError=> e
       puts e
-      #send_error_mail "Error accessing spreadseet: #{e}"
+      send_error_mail "Error accessing spreadseet: #{e}"
     rescue Exception => e
-      puts e
-      #send_error_mail "ERROR: #{e}"
+      msg = "ERROR Parsing player #{recent_player}: #{e}"
+      puts msg
+      send_error_mail msg
     end
 
   end

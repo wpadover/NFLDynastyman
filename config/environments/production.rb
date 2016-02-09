@@ -80,7 +80,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
 
-  logger.info "Configuring heroku/sendgrid mail"
   Mail.defaults do
     delivery_method :smtp, {
       :address => 'smtp.sendgrid.net',

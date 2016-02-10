@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008004638) do
+ActiveRecord::Schema.define(version: 20160210032525) do
 
   create_table "contracts", force: :cascade do |t|
     t.integer  "length"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(version: 20151008004638) do
   add_index "contracts", ["fa_status"], name: "index_contracts_on_fa_status"
   add_index "contracts", ["fantasy_team_id"], name: "index_contracts_on_fantasy_team_id"
   add_index "contracts", ["player_id"], name: "index_contracts_on_player_id"
+
+  create_table "draft_picks", force: :cascade do |t|
+    t.integer  "year"
+    t.integer  "round"
+    t.string   "pick"
+    t.integer  "fantasy_team_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "comments"
+  end
+
+  add_index "draft_picks", ["fantasy_team_id"], name: "index_draft_picks_on_fantasy_team_id"
+  add_index "draft_picks", ["year"], name: "index_draft_picks_on_year"
 
   create_table "fantasy_teams", force: :cascade do |t|
     t.string   "owner_name"

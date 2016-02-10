@@ -16,6 +16,12 @@ YEAR_4_SALARY_IDX=10
 FA_STATUS_IDX=11
 CONTRACT_STATUS_IDX=12
 
+DRAFT_ABBREVIATION_IDX=0
+DRAFT_YEAR_IDX=1
+DRAFT_ROUND_IDX=2
+DRAFT_PICK_IDX=3
+DRAFT_COMMENT_IDX=4
+
 def send_error_mail(error)
   Mail.deliver do
     from     'rosterimport@dynastyfootballmanager.com'
@@ -60,7 +66,7 @@ def session
 end
 
 def spreadsheet(session)
-  session.spreadsheet_by_key("1pR3a3QE5699ZlibZreraA4tpkMriC0TBs-HPEB48OKo").worksheets[0]
+  session.spreadsheet_by_key("1pR3a3QE5699ZlibZreraA4tpkMriC0TBs-HPEB48OKo")
 end
 
 namespace :players do
@@ -75,6 +81,8 @@ namespace :players do
     begin
 
       spreadsheet = spreadsheet(session)
+      player_sheet = spreadsheet.worksheets[0]
+      draft_sheet = spreadsheet.worksheets[6]
 
       # Since we are wiping previous data each time,
       # make a transaction in case something fails
@@ -82,10 +90,11 @@ namespace :players do
       ActiveRecord::Base.transaction do
 
         # Wipe previous data
+        DraftPick.destroy_all
         Contract.destroy_all
         Player.destroy_all
 
-        spreadsheet.rows.each do |row|
+        player_sheet.rows[1..-1].each do |row|
           team_abbreviation = row[ABBREVIATION_IDX]
             player = Player.create(
               last_name: row[LAST_NAME_IDX],
@@ -98,7 +107,7 @@ namespace :players do
           if fantasy_team_by_abbrev[team_abbreviation]
             team = fantasy_team_by_abbrev[team_abbreviation]
             puts "Creating contract for #{player.first_name} #{player.last_name}"
-            team.contracts.create(
+            team.contracts.create!(
               player: player,
               length: row[CONTRACT_LENGTH_IDX],
               year_1_salary: row[YEAR_1_SALARY_IDX],
@@ -108,6 +117,19 @@ namespace :players do
               fa_status: row[FA_STATUS_IDX].upcase,
               contract_status: row[CONTRACT_STATUS_IDX].upcase,
               start_year: 2015
+            )
+          end
+        end
+
+        draft_sheet.rows[1..-1].each do |row|
+          team_abbreviation = row[DRAFT_ABBREVIATION_IDX]
+          if fantasy_team_by_abbrev[team_abbreviation]
+            team = fantasy_team_by_abbrev[team_abbreviation]
+            team.draft_picks.create!(
+              year: row[DRAFT_YEAR_IDX],
+              round: row[DRAFT_ROUND_IDX],
+              pick: row[DRAFT_PICK_IDX],
+              comments: row[DRAFT_COMMENT_IDX]
             )
           end
         end

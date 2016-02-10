@@ -6,6 +6,7 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
 
   FantasyTeam.get({id: $routeParams.id}, function(data) {
     $scope.contracts = data.contracts;
+    $scope.draftPicks = data.draft_picks;
   });
 
   $scope.radio = {

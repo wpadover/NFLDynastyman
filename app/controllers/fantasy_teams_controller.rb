@@ -12,7 +12,7 @@ class FantasyTeamsController < ApplicationController
     @fantasy_team = FantasyTeam.find_by(id: params[:id])
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @fantasy_team.to_json(:include => { :contracts => { :include => :player } } ) }
+      format.json { render json: @fantasy_team.to_json(:include => [ {:contracts => { :include => :player } }, :draft_picks ] ) }
     end
   end
 

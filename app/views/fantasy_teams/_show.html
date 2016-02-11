@@ -27,76 +27,70 @@
       </div>
       <br/>
       <br/>
-      <div>
-        <ul>
-          <li>
-            <b>Filtered Contract Length Sum:</b> {{filteredLengthTotal()}}
-          </li>
-          <li>
-            <b>Filtered Salary Sum:</b> {{filteredSalaryTotal()}}
-          </li>
-          <li>
-            <b>Filtered Number of Players:</b> {{filteredNumberOfPlayers()}}
-          </li>
-        </ul>
-      </div>
-
 
       <table class="table fantasy_teams table-striped">
 
         <thead>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.last_name';reverseSort = !reverseSort; ">
-          Last Name <span ng-show="(orderByField == 'player.last_name') || (orderByField == '-player.last_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.first_name'; reverseSort = !reverseSort">
-          First Name <span ng-show="(orderByField == 'player.first_name') || (orderByField == '-player.first_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.position'; reverseSort = !reverseSort">
-          Pos<span ng-show="(orderByField == 'player.position') || (orderByField == '-player.position')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.nfl_team_name'; reverseSort = !reverseSort">
-          NFL Team<span ng-show="(orderByField == 'player.nfl_team_name') || (orderByField == '-player.nfl_team_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.bye_week'; reverseSort = !reverseSort">
-          Bye<span ng-show="(orderByField == 'player.bye_week') || (orderByField == '-player.bye_week')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'fa_status'; reverseSort = !reverseSort">
-          UFA/RFA<span ng-show="(orderByField == 'fa_status') || (orderByField == '-fa_status')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'contract_status'; reverseSort = !reverseSort">
-          Status<span ng-show="(orderByField == 'contract_status') || (orderByField == '-contract_status')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'length'; reverseSort = !reverseSort">
-          Len<span ng-show="(orderByField == 'length') || (orderByField == '-length')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'start_year'; reverseSort = !reverseSort">
-          Start<span ng-show="(orderByField == 'start_year') || (orderByField == '-start_year')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_1_salary'; reverseSort = !reverseSort">
-          Yr 1 Salary<span ng-show="(orderByField == 'year_1_salary') || (orderByField == '-year_1_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_2_salary'; reverseSort = !reverseSort">
-          Yr 2 Salary<span ng-show="(orderByField == 'year_2_salary') || (orderByField == '-year_2_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_3_salary'; reverseSort = !reverseSort">
-          Yr 3 Salary<span ng-show="(orderByField == 'year_3_salary') || (orderByField == '-year_3_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
-          <th>
-            <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_4_salary'; reverseSort = !reverseSort">
-          Yr 4 Salary<span ng-show="(orderByField == 'year_4_salary') || (orderByField == '-year_4_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
-          </th>
+          <tr>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.last_name';reverseSort = !reverseSort; ">
+            Last Name <span ng-show="(orderByField == 'player.last_name') || (orderByField == '-player.last_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.first_name'; reverseSort = !reverseSort">
+            First Name <span ng-show="(orderByField == 'player.first_name') || (orderByField == '-player.first_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.position'; reverseSort = !reverseSort">
+            Pos<span ng-show="(orderByField == 'player.position') || (orderByField == '-player.position')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.nfl_team_name'; reverseSort = !reverseSort">
+            NFL Team<span ng-show="(orderByField == 'player.nfl_team_name') || (orderByField == '-player.nfl_team_name')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'player.bye_week'; reverseSort = !reverseSort">
+            Bye<span ng-show="(orderByField == 'player.bye_week') || (orderByField == '-player.bye_week')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'fa_status'; reverseSort = !reverseSort">
+            UFA/RFA<span ng-show="(orderByField == 'fa_status') || (orderByField == '-fa_status')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'contract_status'; reverseSort = !reverseSort">
+            Status<span ng-show="(orderByField == 'contract_status') || (orderByField == '-contract_status')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'length'; reverseSort = !reverseSort">
+            Len<span ng-show="(orderByField == 'length') || (orderByField == '-length')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'start_year'; reverseSort = !reverseSort">
+            Start<span ng-show="(orderByField == 'start_year') || (orderByField == '-start_year')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_1_salary'; reverseSort = !reverseSort">
+            Yr 1 Salary<span ng-show="(orderByField == 'year_1_salary') || (orderByField == '-year_1_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_2_salary'; reverseSort = !reverseSort">
+            Yr 2 Salary<span ng-show="(orderByField == 'year_2_salary') || (orderByField == '-year_2_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_3_salary'; reverseSort = !reverseSort">
+            Yr 3 Salary<span ng-show="(orderByField == 'year_3_salary') || (orderByField == '-year_3_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+            <th>
+              <a href="#" ng-click="orderByField = (reverseSort ? '' : '-') + 'year_4_salary'; reverseSort = !reverseSort">
+            Yr 4 Salary<span ng-show="(orderByField == 'year_4_salary') || (orderByField == '-year_4_salary')"><span ng-show="!reverseSort" class="glyphicon glyphicon-chevron-up"></span><span ng-show="reverseSort" class="glyphicon glyphicon-chevron-down"></span></span></a>
+            </th>
+          </tr>
+          <tr>
+            <th colspan=7>Filtered Totals ({{filteredNumberOfPlayers()}} total players)</th>
+            <th>{{filteredLengthTotal()}}</th>
+            <th>-</th>
+            <th ng-repeat="i in [1, 2, 3, 4]">{{filteredSalaryTotalForYear(i)}}</th>
+          </tr>
         </thead>
 
         <tbody>

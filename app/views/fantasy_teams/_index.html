@@ -3,12 +3,18 @@
     <tr>
       <th>Owner</th>
       <th>Team Name</th>
+      <th>Active Total Contract Length</th>
+      <th>Active Total Salary</th>
+      <th>Active Num. Players</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="fantasy_team in fantasy_teams">
       <td>{{fantasy_team.owner_name}}</td>
       <td><a ng-href="fantasy_teams/{{fantasy_team.id}}" target="_self">{{fantasy_team.team_name + ' (' + fantasy_team.abbreviation + ')'}}</a></td>
+      <td>{{fantasy_team.active_total_contract_length}}</td>
+      <td>{{fantasy_team.active_total_salary}}</td>
+      <td>{{fantasy_team.number_of_active_players}}</td>
     </tr>
   </tbody>
 </table>

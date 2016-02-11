@@ -35,12 +35,12 @@ fantasyTeamControllers.controller('FantasyTeamCtrl', ['$scope', '$routeParams', 
     }
   };
 
-  $scope.filteredSalaryTotal = function() {
+  $scope.filteredSalaryTotalForYear = function(year) {
     var total = 0;
     if ($scope.contracts) {
       $scope.contracts.forEach(function(contract) {
         if ($scope.filterByContractStatus(contract) && $scope.filterByPosition(contract)) {
-          total = total + contract.year_1_salary;
+          total = total + contract['year_' + year + '_salary'];
         }
       });
     }

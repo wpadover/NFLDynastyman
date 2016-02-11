@@ -4,7 +4,7 @@ class FantasyTeamsController < ApplicationController
     @fantasy_teams = FantasyTeam.all
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @fantasy_teams}
+      format.json { render json: @fantasy_teams.as_json(methods: [:active_total_contract_length, :active_total_salary, :number_of_active_players])}
     end
   end
 
